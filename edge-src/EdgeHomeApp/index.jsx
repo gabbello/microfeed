@@ -11,7 +11,7 @@ export default class EdgeHomeApp extends React.Component {
       <HtmlHeader
         title={jsonData.title}
         description={htmlMetaDescription(jsonData._microfeed.description_text, false)}
-        webpackJsList={['/build/search_js-[hash].js']}
+        webpackJsList={['search_js']}
         webpackCssList={[]}
         favicon={{
           // 'apple-touch-icon': '/assets/apple-touch-icon.png',
