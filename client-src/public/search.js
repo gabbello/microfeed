@@ -23,9 +23,7 @@ function initSearch() {
   
   // Store original items for reset
   const originalItems = itemsContainer.innerHTML;
-  
-  const originalItems = itemsContainer.innerHTML;
-  
+     
   searchInput.addEventListener('input', async (e) => {
     const searchTerm = e.target.value.toLowerCase();
     
