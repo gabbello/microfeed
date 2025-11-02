@@ -1,11 +1,29 @@
 function initSearch() {
+  console.log('Search script loaded');
   const searchInput = document.getElementById('feed-search');
   const itemsContainer = document.getElementById('feed-items');
   
-  if (!searchInput || !itemsContainer) return;
+  if (!searchInput) {
+    console.error('Search input not found - ID: feed-search');
+    return;
+  }
   
+  if (!itemsContainer) {
+    console.error('Items container not found - ID: feed-items');
+    return;
+  }
+  
+  console.log('Search elements found, initializing...');
+  
+  // Add status message element
+  const statusDiv = document.createElement('div');
+  statusDiv.id = 'search-status';
+  statusDiv.className = 'text-sm text-gray-500 mb-2';
+  searchInput.parentNode.insertBefore(statusDiv, searchInput.nextSibling);
+  
+  // Store original items for reset
   const originalItems = itemsContainer.innerHTML;
-  
+     
   searchInput.addEventListener('input', async (e) => {
     const searchTerm = e.target.value.toLowerCase();
     
