@@ -20,6 +20,11 @@ const entry = {
   admin_styles_css: './common/admin_styles.css',
 
   //
+  // Public JS
+  //
+  search_js: './public/search.js',
+
+  //
   // JS
   //
 
